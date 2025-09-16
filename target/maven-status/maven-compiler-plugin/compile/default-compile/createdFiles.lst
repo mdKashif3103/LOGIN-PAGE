@@ -1,0 +1,6 @@
+com\example\magnus\model\Employee.class
+com\example\magnus\controller\MoreController.class
+com\example\magnus\repo\EmployeeRepository.class
+com\example\magnus\controller\EmployeeController.class
+com\example\magnus\MagnusApplication.class
+com\example\magnus\service\EmployeeService.class

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div>
+  <h3>Tooltips</h3>
+  <button class="btn btn-secondary" data-bs-toggle="tooltip" title="This is a tooltip">Hover me</button>
+</div>
+<script>$(function(){var t = new bootstrap.Tooltip($('[data-bs-toggle="tooltip"]'))});</script>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div class="card">
+  <div class="card-body">
+    <h3 th:text="${employee.id}==null ? 'Create Employee' : 'Edit Employee'"></h3>
+    <form th:action="${employee.id}==null ? '/employee/create' : '/employee/' + ${employee.id} + '/update'" method="post">
+      <div class="mb-3"><label>Name</label><input class="form-control" name="name" th:value="${employee.name}" required/></div>
+      <div class="mb-3"><label>Email</label><input class="form-control" name="email" th:value="${employee.email}"/></div>
+      <div class="mb-3"><label>Gender</label><input class="form-control" name="gender" th:value="${employee.gender}"/></div>
+      <div class="mb-3"><label>Phone</label><input class="form-control" name="phone" th:value="${employee.phone}"/></div>
+      <div class="mb-3"><label>DOB</label><input class="form-control" type="date" name="dob" th:value="${employee.dob}"/></div>
+      <button class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+</html>

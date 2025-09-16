@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div>
+  <h3>Employees</h3>
+  <table class="table table-striped">
+    <thead><tr><th></th><th>Name</th><th>Email</th><th>Gender</th><th>Phone</th><th>Actions</th></tr></thead>
+    <tbody>
+      <tr th:each="e : ${employees}">
+        <td><input type="checkbox" th:value="${e.id}"/></td>
+        <td th:text="${e.name}"></td>
+        <td th:text="${e.email}"></td>
+        <td th:text="${e.gender}"></td>
+        <td th:text="${e.phone}"></td>
+        <td>
+          <a th:href="@{|/employee/${e.id}/edit|}" class="btn btn-sm btn-info">Edit</a>
+          <form th:action="@{|/employee/${e.id}/delete|}" method="post" style="display:inline">
+            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</html>

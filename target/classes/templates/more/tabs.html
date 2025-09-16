@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div>
+  <h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab1">Plan to Succeed</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab2">UnLearning</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab3">Ways of Unlearning</a></li>
+  </ul>
+  <div class="tab-content mt-3">
+    <div id="tab1" class="tab-pane fade show active"><div class="card p-3">Content for Plan to Succeed...</div></div>
+    <div id="tab2" class="tab-pane fade"><div class="card p-3">Content for UnLearning...</div></div>
+    <div id="tab3" class="tab-pane fade"><div class="card p-3">Content for Ways of Unlearning...</div></div>
+  </div>
+</div>
+</html>
